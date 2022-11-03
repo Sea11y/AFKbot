@@ -18,12 +18,14 @@ def set_clicker():
 
 
 keyboard.add_hotkey('shift + z', set_clicker)
-
-while True:
+s = 'y'
+while s == 'y':
     if isClicking:
-        for a in range(1, 1):
-            a += 1
-            time.sleep(1000)
-            #550 - алм. кирка
-            #1200 - алм. эф4, пр3
+        for a in range(2, 4):
+            time.sleep(1500)
+            # #550 - алм. кирка
+            # #1200 - алм. эф4, пр3
             keyboard.send(str(a))
+            if a == 3:
+                s = 0
+                pyautogui.mouseDown()
